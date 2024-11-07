@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li {
+  background-color: #f4f4f4;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-form input,
+.task-form select,
+.task-form textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.task-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .task-list li {
+    padding: 10px;
+  }
+
+  .task-form {
+    gap: 5px;
+  }
+
+  .task-form input,
+  .task-form select,
+  .task-form textarea {
+    padding: 5px;
+  }
+
+  .task-form button {
+    padding: 5px;
+  }
+}
+button {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* 普通按钮背景色 */
+button:not([data-type="delete"]) {
+  background-color: aqua;
+  color: rgb(0, 0, 0);
+}
+
+/* 删除按钮背景色 */
+button[data-type="delete"] {
+  background-color: lightcoral;
+  color: rgb(0, 0, 0);
+}
+
+/* 悬停效果 */
+button:hover {
+  opacity: 0.8;
+}
+
+/* 禁用状态 */
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
